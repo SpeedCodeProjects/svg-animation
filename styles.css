@@ -1,0 +1,108 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  height: 450px;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+/*  ------ Circle Animation ------  */
+
+#Circles circle {
+  stroke-dasharray: 452;
+  animation: circleAnimation 0.3s ease-out;
+  animation-delay: calc(0.1s * var(--i) + 1.2s);
+  animation-fill-mode: forwards;
+}
+
+@keyframes circleAnimation {
+  0% {
+    stroke: white;
+    stroke-dashoffset: 452;
+  }
+
+  100% {
+    stroke: white;
+    stroke-dashoffset: 0;
+  }
+}
+
+/*  ------ Line Animation ------  */
+
+#Lines line {
+  stroke-dasharray: 540;
+  animation: lineAnimation 0.3s ease-out;
+  animation-delay: calc(0.1s * var(--i) + 1.2s);
+  animation-fill-mode: forwards;
+}
+
+@keyframes lineAnimation {
+  0% {
+    stroke: white;
+    stroke-dashoffset: 540;
+  }
+
+  100% {
+    stroke: white;
+    stroke-dashoffset: 0;
+  }
+}
+
+/*  ------ Arc Animation ------  */
+
+#Arc1,
+#Arc2 {
+  stroke-dasharray: 865;
+  animation: arcAnimation 1s ease-in-out;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arcAnimation {
+  0% {
+    stroke: white;
+    stroke-dashoffset: 865;
+  }
+
+  100% {
+    stroke: white;
+    stroke-dashoffset: 0;
+  }
+}
+
+/*  ------ Circle And Line Fade Animation ------  */
+
+#Lines,
+#Circles {
+  animation: fadeAnimation 0.8s ease-in-out;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
